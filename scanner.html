@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EcoCycle AI Scanner - Upload waste photos for instant AI classification." />
+  <title>EcoCycle AI - Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell page-transition">
+    <header class="topbar">
+      <a class="brand" href="index.html">🌱 EcoCycle AI</a>
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="scanner.html" class="active">Scanner</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-block scanner-block">
+        <div class="section-heading">
+          <span>🚀 AI Scanner</span>
+          <h2>Upload a Waste Photo and Get Instant Recycling Guidance</h2>
+        </div>
+        <div class="scanner-grid">
+          <div class="glass-card scanner-panel">
+            <div class="scanner-intro">
+              <h3>📸 Drag & Drop Your Image</h3>
+              <p>Supported formats: JPG, PNG, WEBP. The AI will identify the waste category and provide disposal instructions.</p>
+            </div>
+            <label class="drop-zone" for="imageUpload" id="dropZone">
+              <input type="file" id="imageUpload" accept="image/*" />
+              <span class="drop-icon">+</span>
+              <strong>Drag & drop your image here</strong>
+              <p>or click to browse files</p>
+            </label>
+            <div class="image-preview image-preview-large" id="imagePreview">
+              <span>No image selected</span>
+            </div>
+            <button id="scanButton" class="button button-primary button-block" style="font-size: 1rem; padding: 14px 28px; margin-top: 12px;">Scan & Classify</button>
+          </div>
+
+          <div class="glass-card result-panel" id="resultPanel">
+            <div class="result-intro">
+              <span>✨ Scan Result</span>
+              <h3>AI-Powered Waste Classification</h3>
+            </div>
+            <div class="loader" id="loader" hidden>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="result-card" id="resultCard" hidden>
+              <div class="result-row">
+                <strong>Waste Type</strong>
+                <span id="resultType">—</span>
+              </div>
+              <div class="result-row">
+                <strong>Confidence</strong>
+                <span id="resultConfidence">—</span>
+              </div>
+              <div class="result-row">
+                <strong>Recyclable</strong>
+                <span id="resultRecyclable">—</span>
+              </div>
+              <div class="result-row">
+                <strong>Recommended Container</strong>
+                <span id="resultContainer">—</span>
+              </div>
+              <div class="result-row">
+                <strong>Environmental Impact</strong>
+                <span id="resultImpact">—</span>
+              </div>
+              <div class="result-row">
+                <strong>Disposal Instructions</strong>
+                <span id="resultTip">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 EcoCycle AI. Scan smarter, recycle better.</p>
+    </footer>
+  </div>
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
